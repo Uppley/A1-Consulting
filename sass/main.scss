@@ -1,0 +1,172 @@
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+
+// @import "components/button";
+// @import "components/card";
+// @import "components/composition";
+
+@import"layout/grid";
+@import "layout/header";
+@import "layout/footer";
+
+@import "pages/home";
+
+@media only screen and (max-width : 1225px) { 
+    .services {
+        flex-direction: column;
+        padding: 2rem;
+
+    
+        &--card {
+            height: auto;
+            width: auto;
+            padding: 4rem;
+            margin-top:0;
+            margin-bottom: 2rem;
+        
+        
+            
+}
+    }
+
+
+    // hero 
+    .hero {
+        .hero {
+           
+    
+    
+    
+            &--main {
+               
+                &--heading {
+                    font-size:3rem;
+                }
+            }
+    }
+}
+
+}
+
+@media only screen and (max-width : 715px) { 
+    .toggle {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .header {
+
+        &--contact {
+          
+
+            &--ul {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+        &--main {
+            &--nav {
+                display: none;
+            }
+        }
+
+    }
+// hero
+    .hero {
+     
+        &--button {
+            &:link,
+            &:visited {
+                
+                padding: .5rem 1rem;
+             
+            }
+    }
+    }
+// footer
+    .footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+        &--contact {
+            margin-bottom: 2rem;
+        }
+
+        &--bottom {
+            text-align: center;
+            margin-bottom: 2rem;
+            &--logo {
+                & img {
+                    width: auto;
+                    height: auto;
+                }
+            }
+        }
+    }
+
+// Services
+
+    
+
+
+
+    // our numbers
+    .our-numbers {
+        display: flex;
+        flex-direction: column;
+    }
+    // our services
+    .our-services {
+        width: 100%;
+        &--card {
+            width: auto;
+        }
+}
+
+
+// consulting
+    .consulting {
+        display: flex;
+        flex-direction: column;
+        padding: 4rem;
+
+    }
+// case studies
+.case-studies {
+    &--title {
+        margin-left: 10rem;
+    }
+
+    &--heading {
+        margin-left: 10rem;
+    }
+}
+
+//  Recent blog
+.recent-blog {
+
+    &--article {
+        width: auto;
+        margin: 0 auto;
+
+        
+    }
+
+}
+
+
+
+}
+
+
+
+

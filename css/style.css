@@ -1,0 +1,439 @@
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  80% {
+    transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  80% {
+    transform: translateX(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box;
+  font-size: 1.6rem;
+  font-family: 'Source Sans Pro', sans-serif;
+  line-height: 1.7;
+  overflow-x: hidden; }
+
+img {
+  width: 100%;
+  height: auto; }
+
+#sidemenu {
+  position: absolute;
+  right: 0;
+  background: #252C49;
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  opacity: 0.9;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s; }
+  #sidemenu ul {
+    list-style-type: none;
+    margin-left: 4rem; }
+    #sidemenu ul li a {
+      text-decoration: none;
+      color: #fff;
+      transition: all .2s;
+      transition-timing-function: ease-in; }
+      #sidemenu ul li a:hover {
+        color: #FF3B24;
+        border-bottom: 1px solid #FF3B24; }
+
+.toggle {
+  display: none;
+  cursor: pointer; }
+
+.menu {
+  width: 35px;
+  height: 5px;
+  background: #252C49;
+  margin: 6px 0; }
+
+.menu2 {
+  width: 30px;
+  height: 5px;
+  background: #FF3B24;
+  margin: 6px 0; }
+
+#closetoggle {
+  cursor: pointer;
+  margin-left: 4rem; }
+  #closetoggle:hover {
+    color: #FF3B24; }
+
+.current {
+  border-bottom: 1px solid #FF3B24; }
+
+.header {
+  width: 100%; }
+  .header--contact {
+    width: 100%;
+    background: #252C49;
+    color: #BFBDC1; }
+    .header--contact--ul {
+      list-style-type: none;
+      display: flex;
+      justify-content: center; }
+      .header--contact--ul li {
+        padding: 1rem 2rem; }
+  .header--main {
+    width: 100%;
+    height: auto;
+    padding: 4rem;
+    display: flex;
+    align-content: center;
+    justify-content: space-around; }
+    .header--main--nav ul {
+      display: inline-flex;
+      list-style: none;
+      align-content: center; }
+      .header--main--nav ul li {
+        padding: 1rem 2rem; }
+        .header--main--nav ul li a {
+          text-decoration: none;
+          color: #000;
+          padding-bottom: 1rem;
+          transition: all .2s;
+          transition-timing-function: ease-in; }
+          .header--main--nav ul li a:hover {
+            color: #FF3B24;
+            border-bottom: 1px solid #FF3B24; }
+          .header--main--nav ul li a:active {
+            color: #FF3B24; }
+
+.footer {
+  width: 100%;
+  height: auto;
+  background: #252C49;
+  color: #BFBDC1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 15rem;
+  line-height: 1.8; }
+  .footer--navigation {
+    text-align: center;
+    margin-bottom: 2rem; }
+    .footer--navigation--nav {
+      text-align: center; }
+      .footer--navigation--nav ul {
+        list-style-type: none; }
+        .footer--navigation--nav ul li a {
+          color: #fff;
+          text-decoration: none;
+          transition: all .2s;
+          transition-timing-function: ease-in; }
+          .footer--navigation--nav ul li a:hover {
+            color: #FF3B24;
+            border-bottom: 1px solid #FF3B24; }
+  .footer--contact {
+    text-align: center;
+    margin-bottom: 4rem; }
+  .footer--bottom {
+    text-align: center;
+    margin-bottom: 2rem; }
+    .footer--bottom--logo img {
+      width: 18rem;
+      height: auto; }
+
+.hero {
+  width: 100%;
+  height: 50vh;
+  background: linear-gradient(rgba(37, 44, 73, 0.45), rgba(37, 44, 73, 0.45)), url(/images/heroimg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 1fr); }
+  .hero--main {
+    grid-column: 3/5;
+    grid-row: 2/3; }
+    .hero--main--heading {
+      font-size: 4rem; }
+    .hero--main--button:link, .hero--main--button:visited {
+      font-size: 1.6rem;
+      color: #252C49;
+      display: inline-block;
+      text-decoration: none;
+      background: #fff;
+      border-bottom: 1px solid #FF3B24;
+      margin-top: 1rem;
+      padding: 1rem 2rem;
+      transition: all .2s;
+      transition-timing-function: ease-in; }
+    .hero--main--button:hover {
+      background: #FF3B24;
+      color: #252C49;
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+      transform: translateY(-2px); }
+    .hero--main--button:active {
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+      transform: translateY(0); }
+
+.services {
+  width: 65%;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 auto; }
+  .services--card {
+    height: auto;
+    width: 25rem;
+    padding: 4rem;
+    background: #fff;
+    border: 2px solid #FF3B24;
+    margin-top: -5rem;
+    color: #252C49;
+    text-align: center;
+    transition: all .2s;
+    transition-timing-function: ease-in; }
+    .services--card--link:link, .services--card--link:visited {
+      font-size: 1.6rem;
+      color: #252C49;
+      display: inline-block;
+      text-decoration: none;
+      border-bottom: 1px solid #252C49;
+      margin-top: 1rem;
+      padding: 1rem 2rem;
+      transition: all .2s;
+      transition-timing-function: ease-in; }
+    .services--card--link:hover {
+      background: #252C49;
+      color: #fff;
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+      transform: translateY(-2px); }
+    .services--card--link:active {
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+      transform: translateY(0); }
+
+#business-card {
+  transition: all .2s;
+  transition-timing-function: ease-in; }
+  #business-card:hover {
+    background: linear-gradient(rgba(255, 59, 36, 0.9), rgba(255, 59, 36, 0.9)), url(/images/seo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 2px solid #252C49; }
+
+#performance-card {
+  transition: all .2s;
+  transition-timing-function: ease-in; }
+  #performance-card:hover {
+    background: linear-gradient(rgba(255, 59, 36, 0.9), rgba(255, 59, 36, 0.9)), url(/images/ux.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 2px solid #252C49; }
+
+#finance-card {
+  transition: all .2s;
+  transition-timing-function: ease-in; }
+  #finance-card:hover {
+    background: linear-gradient(rgba(255, 59, 36, 0.9), rgba(255, 59, 36, 0.9)), url(/images/code.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 2px solid #252C49; }
+
+.consulting {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-gap: 10rem;
+  margin-top: 10rem; }
+  .consulting ul {
+    list-style: none; }
+  .consulting--image {
+    grid-column: 2/5; }
+  .consulting--main {
+    grid-column: 5/8; }
+
+.our-numbers {
+  width: 100%;
+  background: #252C49;
+  color: #fff;
+  padding: 6rem;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  margin-top: 10rem;
+  text-align: center; }
+  .our-numbers--heading {
+    margin-top: 4rem; }
+    .our-numbers--heading--title {
+      color: #FF3B24; }
+    .our-numbers--heading--h2 {
+      font-size: 3rem;
+      margin-bottom: 2.5rem; }
+
+.our-services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  width: 60%;
+  padding: 6rem;
+  margin: 0 auto; }
+  .our-services--title {
+    text-align: center;
+    width: 100%;
+    flex-basis: 100%;
+    color: #FF3B24; }
+  .our-services--heading {
+    text-align: center;
+    width: 100%;
+    flex-basis: 100%;
+    font-size: 3.5rem;
+    margin-bottom: 2rem; }
+  .our-services--card {
+    height: auto;
+    width: 25rem;
+    padding: 4rem;
+    background: #fff;
+    border: 2px solid black;
+    margin: 2rem;
+    transition: all .2s;
+    transition-timing-function: ease-in; }
+    .our-services--card:hover {
+      background: #FF3B24; }
+
+.case-studies {
+  background: #BFBDC1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  width: 100%; }
+  .case-studies--title {
+    text-align: left;
+    width: 100%;
+    flex-basis: 100%;
+    color: #252C49;
+    margin-left: 30rem;
+    margin-top: 2rem; }
+  .case-studies--heading {
+    text-align: left;
+    margin-left: 30rem;
+    width: 100%;
+    flex-basis: 100%;
+    font-size: 3.5rem; }
+  .case-studies--card {
+    height: 40rem;
+    width: 25rem;
+    padding: 4rem;
+    background: #fff;
+    border: 2px solid black;
+    margin: 4rem; }
+
+.recent-blog {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  width: 100%; }
+  .recent-blog--title {
+    text-align: center;
+    width: 100%;
+    flex-basis: 100%;
+    color: #FF3B24;
+    margin-top: 2rem; }
+  .recent-blog--heading {
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
+    flex-basis: 100%;
+    font-size: 3.5rem; }
+  .recent-blog--article {
+    width: 30rem;
+    margin: 4rem; }
+    .recent-blog--article--img {
+      width: 25rem;
+      height: auto; }
+
+@media only screen and (max-width: 1225px) {
+  .services {
+    flex-direction: column;
+    padding: 2rem; }
+    .services--card {
+      height: auto;
+      width: auto;
+      padding: 4rem;
+      margin-top: 0;
+      margin-bottom: 2rem; }
+  .hero .hero--main--heading {
+    font-size: 3rem; } }
+
+@media only screen and (max-width: 715px) {
+  .toggle {
+    display: flex;
+    flex-direction: column; }
+  .header--contact--ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center; }
+  .header--main--nav {
+    display: none; }
+  .hero--button:link, .hero--button:visited {
+    padding: .5rem 1rem; }
+  .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .footer--contact {
+      margin-bottom: 2rem; }
+    .footer--bottom {
+      text-align: center;
+      margin-bottom: 2rem; }
+      .footer--bottom--logo img {
+        width: auto;
+        height: auto; }
+  .our-numbers {
+    display: flex;
+    flex-direction: column; }
+  .our-services {
+    width: 100%; }
+    .our-services--card {
+      width: auto; }
+  .consulting {
+    display: flex;
+    flex-direction: column;
+    padding: 4rem; }
+  .case-studies--title {
+    margin-left: 10rem; }
+  .case-studies--heading {
+    margin-left: 10rem; }
+  .recent-blog--article {
+    width: auto;
+    margin: 0 auto; } }

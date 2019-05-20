@@ -1,0 +1,48 @@
+.footer {
+    width: 100%;
+    height: auto;
+    background: $color-primary;
+    color: $color-grey;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 15rem;
+    line-height: 1.8;
+    &--navigation {
+        text-align: center;
+        margin-bottom: 2rem;
+        &--nav {
+            text-align: center;
+            & ul {
+                list-style-type: none;
+
+                & li {
+                    & a {
+                        color: $color-white;
+                        text-decoration: none;
+                        transition: all .2s;
+                        transition-timing-function: ease-in;
+                        &:hover {
+                            color: $color-secondary;
+                            border-bottom: 1px solid #FF3B24;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &--contact {
+        text-align: center;
+        margin-bottom: 4rem;
+        
+    }
+    &--bottom {
+        text-align: center;
+        margin-bottom: 2rem;
+        &--logo {
+            & img {
+                width: 18rem;
+                height: auto;
+            }
+        }
+    }
+}
